@@ -3,7 +3,15 @@
 In this project our flask app is connected with mysql database. The app allows users to submit messages, which are then stored in the database and displayed on the frontend. We created one container for flask app and 2nd container for mysql-database using docker compose file. Both containers are in the same network so that they can communicate each other. We use docker volume (mysql_data) to protect our mysql-container data. 
 
 # Step: 1
-First I create a directory (mysql_data) inside /opt , that I use as a volume in mysql-container. 
+First install docker and docker compose in your system.
+```bash
+apt update
+apt install docker.io -y
+apt install docker-compose -y
+docker-compose --version
+```
+
+I create a directory (mysql_data) inside /opt , that I use as a volume in mysql-container. 
 ```bash
  mkdir /opt/mysql_data
 ```
